@@ -50,5 +50,9 @@ function reset() {
 numInput.addEventListener("change", function() {
     winningScoreDisplay.textContent = this.value;
     winningScore = Number(this.value);
+    if (winningScore <= 0) {
+        winningScore = 1;
+        winningScoreDisplay.textContent = 1;
+    }
     reset();
 });

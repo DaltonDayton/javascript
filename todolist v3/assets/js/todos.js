@@ -22,11 +22,11 @@ $("input[type='text']").keypress(function(event) {
         $(this).val("");
         // Create a new lia nd add to ul
         $("ul").append(
-            '<li><span><i class="fa fa-trash"></i></span> ' + todoText + "</li>"
+            "<li>" + todoText + ' <span><i class="fa fa-trash"></i></span></li>'
         );
     }
 });
 
 $(".fa-plus").on("click", function() {
-    $("input[type='text']").fadeToggle();
+    $("#inputBox").slideToggle();
 });
